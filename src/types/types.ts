@@ -5,5 +5,5 @@ export type Project = {
   readonly category: string;
   readonly image: string;
   readonly link: string;
-  readonly tags: readonly string[];
+  readonly tags: ReadonlyArray<string>; // This is the most correct type
 };

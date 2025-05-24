@@ -1,8 +1,11 @@
-export const projects = [
+import { Project } from "@/types/types";
+
+export const projects: readonly Project[] = [
   {
     id: 1,
     title: "Vibe Stream",
-    description: "A Music Streaming Web App with advance features like admin panel and live chat",
+    description:
+      "A Music Streaming Web App with advance features like admin panel and live chat",
     category: "Web Development",
     image: "/vibe-stream.png",
     link: "https://vibe-stream.onrender.com/",
