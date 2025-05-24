@@ -13,7 +13,7 @@ type MergedButtonProps = Omit<
 };
 
 export const Button = React.forwardRef<HTMLButtonElement, MergedButtonProps>(
-  ({ className, variant = "default", ...props }, ref) => {
+  ({ className = " ", variant = "default", ...props }, ref) => {
     return (
       <motion.button
         whileHover={{ scale: 1.03 }}
