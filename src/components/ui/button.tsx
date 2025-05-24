@@ -4,8 +4,12 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
+// Exclude Framer Motion-specific conflicting props
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  extends Omit<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    "onAnimationStart" | "onAnimationComplete" | "onAnimationIteration"
+  > {
   variant?: "default" | "outline" | "ghost";
 }
 
@@ -30,4 +34,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
+
 Button.displayName = "Button";
+
+export default Button;
