@@ -1,19 +1,18 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-// Exclude Framer Motion-specific conflicting props
-export interface ButtonProps
-  extends Omit<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    "onAnimationStart" | "onAnimationComplete" | "onAnimationIteration"
-  > {
+// Merge the props types properly
+type MergedButtonProps = Omit<
+  React.ButtonHTMLAttributes<HTMLButtonElement> & HTMLMotionProps<"button">,
+  "onDrag" | "ref"
+> & {
   variant?: "default" | "outline" | "ghost";
-}
+};
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = React.forwardRef<HTMLButtonElement, MergedButtonProps>(
   ({ className, variant = "default", ...props }, ref) => {
     return (
       <motion.button
@@ -34,7 +33,4 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
-
 Button.displayName = "Button";
-
-export default Button;
