@@ -6,6 +6,11 @@ import { usePathname } from "next/navigation";
 export function TransitionEffect({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
+  // If the route is /work, render children without animation
+  if (pathname === "/work") {
+    return <>{children}</>;
+  }
+
   return (
     <AnimatePresence mode="wait">
       <motion.div

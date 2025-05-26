@@ -43,6 +43,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <Link
           href={project.link}
+          target="_blank"
           className="inline-flex items-center text-primary font-medium hover:underline"
         >
           View Project

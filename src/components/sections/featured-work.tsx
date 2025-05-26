@@ -56,7 +56,7 @@ export function FeaturedWork() {
   return (
     <section
       ref={containerRef}
-      className="relative py-32 overflow-hidden bg-white"
+      className="relative pt-32  overflow-hidden bg-white"
     >
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-24">
@@ -89,7 +89,7 @@ export function FeaturedWork() {
           </MotionDiv>
         </div>
 
-        <div className="relative h-[180vh]">
+        <div className="relative h-[130vh]">
           {/* Dynamic Connection SVG */}
           <svg
             className="absolute inset-0 w-full h-full pointer-events-none"
@@ -234,7 +234,7 @@ function ProjectCard({
         <div
           className={`absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center`}
         >
-          <img src={project?.image} alt={project?.title} />
+          <img src={project?.image} alt={project?.title} className="h-full w-full object-cover"/>
         </div>
 
         {/* Overlay Content */}

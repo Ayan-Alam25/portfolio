@@ -44,8 +44,8 @@ export function Header() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <MotionDiv whileHover={{ scale: 1.05 }}>
           <Link
-            href="https://ayan-alam25.github.io/personal-portfolio/"
-            target="_blank"
+            href="/"
+            
             className="text-xl font-bold font-space-grotesk"
           >
             Portfolio
@@ -113,8 +113,8 @@ export function Header() {
               className={cn(
                 "py-2 px-3 rounded-md text-base font-medium transition-colors",
                 pathname === link.href
-                  ? "bg-primary/10 text-primary"
-                  : "text-foreground hover:bg-accent"
+                  ? "bg-secondary/10 text-primary"
+                  : "text-secondary hover:bg-primary/10"
               )}
             >
               {link.name}
