@@ -48,7 +48,7 @@ export function Header() {
             
             className="text-xl font-bold font-space-grotesk"
           >
-            Portfolio
+            Ayan Alam
           </Link>
         </MotionDiv>
 

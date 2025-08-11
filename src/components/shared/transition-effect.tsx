@@ -11,6 +11,10 @@ export function TransitionEffect({ children }: { children: React.ReactNode }) {
     return <>{children}</>;
   }
 
+  if(pathname === "/contact"){
+    return <>{children}</>
+  }
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
